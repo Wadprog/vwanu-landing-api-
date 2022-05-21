@@ -24,34 +24,36 @@ const getHtmlMessage = (name) => {
       .replace(/\{{date}}/g, 'May, 27 2022'),
   }
 }
-const send_mail = (name, recipient) => {
-  const accessToken = OAuth2_client.getAccessToken()
+const send_mail = (name, recipient) =>
+  new Promise((resolve, reject) => {
+    const accessToken = OAuth2_client.getAccessToken()
 
-  const transport = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      type: 'OAuth2',
-      user,
-      clientId,
-      clientSecret,
-      refreshToken,
-      accessToken,
-    },
+    const transport = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user,
+        clientId,
+        clientSecret,
+        refreshToken,
+        accessToken,
+      },
+    })
+
+    const template = getHtmlMessage(name)
+    const mail_opt = {
+      from: `W V <${user}>`,
+      to: recipient,
+      subject: template.subject,
+      html: template.html,
+    }
+
+    transport.sendMail(mail_opt, function (err, result) {
+      console.log('finish sendin mail')
+      if (err) reject(error)
+      else resolve(result)
+      transport.close()
+    })
   })
-
-  const template = getHtmlMessage(name)
-  const mail_opt = {
-    from: `W V <${user}>`,
-    to: recipient,
-    subject: template.subject,
-    html: template.html,
-  }
-
-  transport.sendMail(mail_opt, function (err, result) {
-    if (error) console.log('Error', error)
-    else console.log('Success', result)
-    transport.close()
-  })
-}
 
 module.exports.send_mail = send_mail

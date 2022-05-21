@@ -4,7 +4,7 @@ const Tester = require('../../model/tester')
 
 describe('Testing adding a listing testers', () => {
   let testers = []
-  const testEmail = 'minek12108@hbehs.com'
+  const testEmail = 'test@example.com'
   afterAll(async () => {
     await Promise.all(
       testers.map((tester) => Tester.findByIdAndDelete(tester._id))
@@ -17,6 +17,7 @@ describe('Testing adding a listing testers', () => {
       firstName: 'Tester',
       lastName: 'last name',
     })
+    console.log(tester1.body)
     testers.push(tester1.body)
 
     expect(tester1.body).toMatchObject({
