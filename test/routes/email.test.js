@@ -1,10 +1,10 @@
 const request = require('supertest')
-
 const app = require('../../app')
 const Tester = require('../../model/tester')
 
 describe('Testing adding a listing testers', () => {
   let testers = []
+  const testEmail = 'minek12108@hbehs.com'
   afterAll(async () => {
     await Promise.all(
       testers.map((tester) => Tester.findByIdAndDelete(tester._id))
@@ -13,7 +13,7 @@ describe('Testing adding a listing testers', () => {
 
   test('should create a tester', async () => {
     const tester1 = await request(app).post('/tester').send({
-      email: 'tester@example.com',
+      email: testEmail,
       firstName: 'Tester',
       lastName: 'last name',
     })
@@ -21,7 +21,7 @@ describe('Testing adding a listing testers', () => {
 
     expect(tester1.body).toMatchObject({
       _id: expect.any(String),
-      email: 'tester@example.com',
+      email: testEmail,
       firstName: 'Tester',
       lastName: 'last name',
       authorized: true,
@@ -30,7 +30,7 @@ describe('Testing adding a listing testers', () => {
 
   test('should not create a second tester with same email', async () => {
     const response = await request(app).post('/tester').send({
-      email: 'tester@example.com',
+      email: testEmail,
       firstName: 'Tester',
       lastName: 'last name',
     })

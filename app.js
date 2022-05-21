@@ -4,7 +4,7 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 
-var indexRouter = require('./routes/index')
+
 var usersRouter = require('./routes/users')
 var emailRouter = require('./routes/email')
 const connectDB = require('./model')
@@ -27,9 +27,9 @@ connectDB()
 app.use('/users', usersRouter)
 app.use('/tester', emailRouter)
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'out', 'index.html'))
-})
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'client', 'out', 'index.html'))
+// })
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))

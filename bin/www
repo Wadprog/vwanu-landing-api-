@@ -5,10 +5,10 @@
  */
 
 var app = require('../app')
-var debug = require('debug')('vwanu-launch-api:server')
-var http = require('http')
+// var debug = require('debug')('vwanu-launch-api:server')
+// var http = require('http')
 
-app.listen(4004, () => console.log('server listening'))
+app.listen(4007, () => console.log('server listening'))
 /**
  * Get port from environment and store in Express.
  */
