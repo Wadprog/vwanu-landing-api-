@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cafbf071.css",
+    "main.js": "/static/js/main.2e542f85.js",
+    "static/js/498.5cb0de6d.chunk.js": "/static/js/498.5cb0de6d.chunk.js",
+    "static/js/703.87f888e9.chunk.js": "/static/js/703.87f888e9.chunk.js",
+    "static/js/513.468d66b5.chunk.js": "/static/js/513.468d66b5.chunk.js",
+    "static/media/fa-solid-900.svg": "/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/fa-solid-900.eot": "/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/fa-regular-400.svg": "/static/media/fa-regular-400.4689f52cc96215721344.svg",
+    "static/media/fa-brands-400.eot": "/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/nucleo-icons.svg": "/static/media/nucleo-icons.01ebecaf50461162d4bc.svg",
+    "static/media/fa-solid-900.woff": "/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
+    "static/media/fa-brands-400.woff": "/static/media/fa-brands-400.2285773e6b4b172f07d9.woff",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.1551f4f60c37af51121f.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.d878b0a6a1144760244f.woff2",
+    "static/media/fa-regular-400.eot": "/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/nucleo-icons.eot": "/static/media/nucleo-icons.19abb5402a664606b14c.eot",
+    "static/media/nucleo-icons.ttf": "/static/media/nucleo-icons.d6a66724e7a7bf1bba65.ttf",
+    "static/media/fa-regular-400.woff": "/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
+    "static/media/nucleo-icons.woff": "/static/media/nucleo-icons.c82c9b7c40130b7116d3.woff",
+    "static/media/nucleo-icons.woff2": "/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
+    "index.html": "/index.html",
+    "main.cafbf071.css.map": "/static/css/main.cafbf071.css.map",
+    "main.2e542f85.js.map": "/static/js/main.2e542f85.js.map",
+    "498.5cb0de6d.chunk.js.map": "/static/js/498.5cb0de6d.chunk.js.map",
+    "703.87f888e9.chunk.js.map": "/static/js/703.87f888e9.chunk.js.map",
+    "513.468d66b5.chunk.js.map": "/static/js/513.468d66b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cafbf071.css",
+    "static/js/main.2e542f85.js"
+  ]
+}
