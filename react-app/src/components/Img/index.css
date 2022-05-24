@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.grand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #16384c;
+}
+.img-container {
+  position: relative;
+  width: 330px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3px 20px 10px;
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 70px;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.img-container:hover {
+  height: 450px;
+}
+.img-container .img-card_ {
+  max-width: 300px;
+  height: 215px;
+  background: green;
+  margin: 30px 0px;
+  padding: 20px 15px;
+  display: flex;
+  border-radius: 114px;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.img-container .img-card:hover {
+  height: 420px;
+}
+.img-container .img-card .img-imgBx {
+  position: relative;
+  background: #ccc;
+  top: -60px;
+  left: 17px;
+  min-width: initial;
+  width: 260px;
+  height: 260px;
+  border-radius: 4px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.img-container .img-card .img-imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+  max-height: 260px;
+}
+.img-container .img-card .img-content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0s;
+}
+.img-container .img-card:hover .img-content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
