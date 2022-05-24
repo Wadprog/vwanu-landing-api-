@@ -44,7 +44,7 @@ connectDB()
 
 // app.use('/', indexRouter)
 app.use('/users', usersRouter)
-app.use('/testers', emailRouter)
+app.use('/tester', emailRouter)
 app.use('/login', authRouter)
 
 // app.get('*', (req, res) => {

@@ -21,7 +21,7 @@ const getHtmlMessage = (name) => {
     ...emailTemplate,
     html: emailTemplate.html
       .replace(/\{{tester.name}}/g, capitalize(name))
-      .replace(/\{{date}}/g, 'May, 27 2022'),
+      .replace(/\{{date}}/g, '6/1/22'),
   }
 }
 const send_mail = (name, recipient) =>
