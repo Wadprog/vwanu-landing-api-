@@ -4,7 +4,7 @@ const Tester = require('../../model/tester')
 
 describe('Testing adding a listing testers', () => {
   let testers = []
-  const testEmail = 'test@example.com'
+  const testEmail = 'vavalson@hotmail.com'
   afterAll(async () => {
     await Promise.all(
       testers.map((tester) => Tester.findByIdAndDelete(tester._id))
@@ -12,7 +12,7 @@ describe('Testing adding a listing testers', () => {
   })
 
   test('should create a tester', async () => {
-    const tester1 = await request(app).post('/tester').send({
+    const tester1 = await request(app).post('/testers').send({
       email: testEmail,
       firstName: 'Tester',
       lastName: 'last name',
@@ -30,7 +30,7 @@ describe('Testing adding a listing testers', () => {
   })
 
   test('should not create a second tester with same email', async () => {
-    const response = await request(app).post('/tester').send({
+    const response = await request(app).post('/testers').send({
       email: testEmail,
       firstName: 'Tester',
       lastName: 'last name',
@@ -39,7 +39,7 @@ describe('Testing adding a listing testers', () => {
   })
 
   test('should list all the testers', async () => {
-    const response = await request(app).get('/tester')
+    const response = await request(app).get('/testers')
     expect(response.status).toEqual(200)
     expect(Array.isArray(response.body)).toBeTruthy()
     expect(response.body[0]).toMatchObject({

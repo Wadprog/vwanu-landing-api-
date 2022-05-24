@@ -42,7 +42,7 @@ const send_mail = (name, recipient) =>
 
     const template = getHtmlMessage(name)
     const mail_opt = {
-      from: `W V <${user}>`,
+      from: `Info <${user}>`,
       to: recipient,
       subject: template.subject,
       html: template.html,

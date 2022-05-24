@@ -5,6 +5,9 @@ const router = express.Router()
 /* GET users listing. */
 
 router.route('/').post(emailController.createOne).get(emailController.getAll)
-router.route('/:id').get(emailController.getOne)
+router
+  .route('/:id')
+  .get(emailController.getOne)
+  .patch(emailController.sendEmail)
 
 module.exports = router

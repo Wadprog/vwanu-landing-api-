@@ -5,10 +5,13 @@
  */
 
 var app = require('../app')
+const config = require('../config')
 // var debug = require('debug')('vwanu-launch-api:server')
 // var http = require('http')
 
-app.listen(4007, () => console.log('server listening'))
+app.listen(config.PORT, () =>
+  console.log(`server listening on port ${config.PORT}`)
+)
 /**
  * Get port from environment and store in Express.
  */
